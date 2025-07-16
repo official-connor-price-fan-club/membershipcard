@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mitgliedschafts-Fankarten
-</title>
+    <title>Membership Fan Cards</title>
     <style>
         * {
             margin: 0;
@@ -17,6 +16,7 @@
             background: linear-gradient(to bottom, #4c1d95, #2e1065);
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             padding: 1.5rem 1rem;
+            color: white;
         }
 
         header {
@@ -27,9 +27,8 @@
         }
 
         .title {
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: bold;
-            color: white;
         }
 
         .grid-icon {
@@ -51,54 +50,43 @@
             position: relative;
             overflow: hidden;
             border-radius: 1rem;
-            height: 12rem;
+            height: auto;
             background-color: rgba(0, 0, 0, 0.4);
             backdrop-filter: blur(8px);
         }
 
         .card-image {
-            position: absolute;
-            inset: 0;
             width: 100%;
-            height: 100%;
-            object-fit: contain;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
         }
 
         .card-content {
-            position: relative;
-            height: 100%;
             padding: 1rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
         }
 
         .card-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-        }
-
-        .members-count {
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        .members-number {
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: white;
-        }
-
-        .card-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
+            margin-bottom: 1rem;
         }
 
         .card-title {
             font-size: 1.5rem;
             font-weight: bold;
-            color: white;
+        }
+
+        .members-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 1rem;
         }
 
         .arrow-button {
@@ -110,6 +98,7 @@
         }
 
         .purchase-button {
+            display: block;
             width: 100%;
             background-color: white;
             color: #7c3aed;
@@ -120,6 +109,7 @@
             font-weight: bold;
             cursor: pointer;
             transition: background-color 0.2s;
+            margin-top: 1rem;
         }
 
         .purchase-button:hover {
@@ -140,9 +130,8 @@
 </head>
 <body>
     <header>
-        <h1 class="title">Membership Fan Card.
-</h1>
-        <button class="grid-icon">
+        <h1 class="title">Membership Fan Card</h1>
+        <button class="grid-icon" aria-label="Toggle View">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="3" y="3" width="7" height="7" />
                 <rect x="14" y="3" width="7" height="7" />
@@ -153,29 +142,31 @@
     </header>
 
     <div class="cards-container">
-        <!-- First Class Card -->
         <div class="card">
             <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-01-11%20at%2015.54.34_a3f64137.jpg-7CCGEoLEFT1Af7BMGoOc8NeUxXpEM5.jpeg" 
                  alt="First class membership" 
                  class="card-image">
             <div class="card-content">
+                <a href="https://joyce-white-vance.blogspot.com/p/body-margin-0-padding-0-font-family.html">
+                    <button class="purchase-button">Pay with Crypto</button>
+                </a>
                 <div class="card-header">
-                    <div class="members-count">
-                     Price
-
-                        <div class="members-number">250$</div>
-                    </div>
-                    <button class="arrow-button">
+                    <div class="card-title">Support Message</div>
+                    <button class="arrow-button" aria-label="More Info">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14" />
                             <path d="m12 5 7 7-7 7" />
                         </svg>
                     </button>
                 </div>
+                <div class="members-description">
+                    Please be informed that all donations are intended to support the sustainability of the fan club — both as a club and as a community.<br><br>
+                    As a united family, we contribute to causes such as supporting orphanages, children without parents, and individuals with disabilities. We kindly ask for any support you can offer — no matter how small — because every contribution counts.<br><br>
+                    Within our community, we stand by each other during difficult times, including the loss of loved ones, and we also support each other’s businesses in every little way possible.<br><br>
+                    All of this is made possible through your generosity. At the end of the day, we are united by one cause: growth — together.
+                </div>
                 <div class="card-footer">
-                   
-                 
-                    <button class="arrow-button">
+                    <button class="arrow-button" aria-label="Navigate">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14" />
                             <path d="m12 5 7 7-7 7" />
@@ -184,12 +175,6 @@
                 </div>
             </div>
         </div>
-  
-
-    <a href="https://joyce-white-vance.blogspot.com/p/body-margin-0-padding-0-font-family.html">  
-    <button class="purchase-button">
-     Pay with crypto.
-    </button>
-      </a>
+    </div>
 </body>
 </html>
